@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
@@ -9,21 +8,21 @@ const About = () => {
   const testimonials = [
     {
       name: "Anand Raman",
-      role: "Business Traveler",
+      position: "Business Traveler",
       content:
         "RD Hotels offers exceptional service and comfort. My stay was perfect for my business needs with excellent amenities and attentive staff.",
       image: "https://randomuser.me/api/portraits/men/82.jpg",
     },
     {
       name: "Priya Sharma",
-      role: "Family Vacation",
+      position: "Family Vacation",
       content:
         "Our family had an amazing experience at RD Hotels. The staff was incredibly helpful and the rooms were spacious and luxurious.",
       image: "https://randomuser.me/api/portraits/women/65.jpg",
     },
     {
       name: "Vikram Mehta",
-      role: "Corporate Event Planner",
+      position: "Corporate Event Planner",
       content:
         "We hosted our annual conference at RD Hotels and everything was perfect. The venue, catering, and service exceeded our expectations.",
       image: "https://randomuser.me/api/portraits/men/67.jpg",
@@ -57,13 +56,10 @@ const About = () => {
         <section className="py-16 container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionTitle>Our Story</SectionTitle>
-              <p className="text-lg mb-6">
-                RD Hotels was established in Perundurai with a vision to provide
+              <SectionTitle title="Our Story">RD Hotels was established in Perundurai with a vision to provide
                 unparalleled luxury and comfort to travelers. What began as a
                 small family-run establishment has grown into one of the most
-                prestigious hotels in the region.
-              </p>
+                prestigious hotels in the region.</SectionTitle>
               <p className="text-lg mb-6">
                 Founded by the Radhakrishnan family in 1995, RD Hotels has
                 maintained its commitment to excellence and traditional Indian
@@ -93,11 +89,8 @@ const About = () => {
         {/* Values Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle>Our Values</SectionTitle>
-            <p className="text-lg mb-12 max-w-3xl">
-              At RD Hotels, our core values guide every aspect of our service and
-              operations.
-            </p>
+            <SectionTitle title="Our Values">At RD Hotels, our core values guide every aspect of our service and
+            operations.</SectionTitle>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="card-luxury p-8 text-center">
@@ -158,17 +151,14 @@ const About = () => {
         {/* Testimonials Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <SectionTitle>Guest Experiences</SectionTitle>
-            <p className="text-lg mb-12 max-w-3xl">
-              Hear what our guests have to say about their stay at RD Hotels.
-            </p>
+            <SectionTitle title="Guest Experiences">Hear what our guests have to say about their stay at RD Hotels.</SectionTitle>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <TestimonialCard
                   key={index}
                   name={testimonial.name}
-                  role={testimonial.role}
+                  position={testimonial.position}
                   content={testimonial.content}
                   image={testimonial.image}
                 />
@@ -180,10 +170,7 @@ const About = () => {
         {/* Team Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle>Our Leadership</SectionTitle>
-            <p className="text-lg mb-12 max-w-3xl">
-              Meet the dedicated team behind RD Hotels' success.
-            </p>
+            <SectionTitle title="Our Leadership">Meet the dedicated team behind RD Hotels' success.</SectionTitle>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="card-luxury text-center overflow-hidden">

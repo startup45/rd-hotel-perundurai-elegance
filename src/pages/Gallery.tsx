@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
@@ -96,12 +95,9 @@ const Gallery = () => {
 
         {/* Main Gallery Section */}
         <section className="py-16 container mx-auto px-4">
-          <SectionTitle>Browse Our Gallery</SectionTitle>
-          <p className="text-lg mb-12 max-w-3xl">
-            Get a glimpse of the luxury and comfort that awaits you at RD Hotels.
+          <SectionTitle title="Browse Our Gallery">Get a glimpse of the luxury and comfort that awaits you at RD Hotels.
             Browse through our collection of images showcasing our rooms,
-            facilities, dining options, and more.
-          </p>
+            facilities, dining options, and more.</SectionTitle>
 
           <GalleryGrid images={galleryImages} categories={categories} />
         </section>

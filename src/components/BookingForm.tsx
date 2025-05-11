@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { format } from "date-fns";
-import { CalendarIcon, Check, CreditCard, WhatsApp } from "lucide-react";
+import { CalendarIcon, Check, CreditCard, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 
@@ -263,7 +263,7 @@ const BookingForm = ({ roomId, roomName, price }: { roomId?: string; roomName?: 
             className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white"
             onClick={handleWhatsAppBooking}
           >
-            <WhatsApp size={18} /> Book via WhatsApp
+            <MessageSquare size={18} /> Book via WhatsApp
           </Button>
         </div>
       </form>

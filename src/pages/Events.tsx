@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
@@ -71,7 +70,8 @@ const Events = () => {
 
         {/* Event Spaces Section */}
         <section className="py-16 container mx-auto px-4">
-          <SectionTitle>Our Event Spaces</SectionTitle>
+          <SectionTitle title="Our Event Spaces">From intimate gatherings to grand celebrations, RD Hotels offers
+            versatile spaces to accommodate your special occasions.</SectionTitle>
           <p className="text-lg mb-12 max-w-3xl">
             From intimate gatherings to grand celebrations, RD Hotels offers
             versatile spaces to accommodate your special occasions.
@@ -145,7 +145,8 @@ const Events = () => {
         {/* Features Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle>Event Services</SectionTitle>
+            <SectionTitle title="Event Services">Our dedicated team ensures your event runs flawlessly with our
+            comprehensive services.</SectionTitle>
             <p className="text-lg mb-12 max-w-3xl">
               Our dedicated team ensures your event runs flawlessly with our
               comprehensive services.
@@ -173,7 +174,8 @@ const Events = () => {
 
         {/* Gallery Section */}
         <section className="py-16 container mx-auto px-4">
-          <SectionTitle>Event Gallery</SectionTitle>
+          <SectionTitle title="Event Gallery">Browse through our gallery showcasing the various events hosted at RD
+            Hotels.</SectionTitle>
           <p className="text-lg mb-12 max-w-3xl">
             Browse through our gallery showcasing the various events hosted at RD
             Hotels.
@@ -185,7 +187,8 @@ const Events = () => {
         {/* Inquiry Form */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle>Inquire About Your Event</SectionTitle>
+            <SectionTitle title="Inquire About Your Event">Contact us to discuss your event requirements and check
+            availability.</SectionTitle>
             <p className="text-lg mb-12 max-w-3xl">
               Contact us to discuss your event requirements and check
               availability.

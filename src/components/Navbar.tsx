@@ -39,38 +39,42 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        isScrolled ? "bg-white py-3 shadow-md" : "bg-ivory py-5"
-      } w-full fixed top-0 z-50 transition-all duration-300`}
+        isScrolled ? "bg-white shadow-md" : "bg-ivory"
+      } w-full fixed top-0 z-50 transition-all duration-300 py-3`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
+        {/* Logo - Left aligned */}
+        <Link to="/" className="flex-shrink-0">
           <span className="font-serif text-2xl md:text-3xl font-bold text-maroon">
             RD Hotels
           </span>
         </Link>
 
-        {/* Desktop Navigation - Centered */}
-        <nav className="hidden lg:flex items-center justify-center flex-1 mx-10">
-          <div className="flex items-center space-x-8">
+        {/* Desktop Navigation - Centered with no extra gaps */}
+        <nav className="hidden lg:flex items-center justify-center">
+          <ul className="flex space-x-6 xl:space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className="nav-link font-medium"
-              >
-                {link.name}
-              </Link>
+              <li key={link.name}>
+                <Link
+                  to={link.path}
+                  className="nav-link font-medium text-sm transition-colors"
+                >
+                  {link.name}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </nav>
 
-        {/* Phone and Book Now Button (Desktop) */}
-        <div className="hidden lg:flex items-center gap-4">
-          <div className="flex items-center gap-2">
+        {/* Phone number and Book Now button - Right aligned */}
+        <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
+          <div className="flex items-center space-x-2">
             <Phone size={18} className="text-maroon" />
             <span className="text-sm font-medium">+91 1234567890</span>
           </div>
-          <Button className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2">Book Now</Button>
+          <Button className="bg-maroon hover:bg-maroon/90 text-white px-6">
+            Book Now
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -98,7 +102,7 @@ const Navbar = () => {
             <X size={24} />
           </button>
         </div>
-        <div className="flex flex-col items-center justify-center h-full space-y-8 -mt-20">
+        <div className="flex flex-col items-center justify-center h-full space-y-6 -mt-20">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -113,7 +117,9 @@ const Navbar = () => {
             <Phone size={18} className="text-maroon" />
             <span className="text-sm font-medium">+91 1234567890</span>
           </div>
-          <Button className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 mt-4">Book Now</Button>
+          <Button className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 mt-4">
+            Book Now
+          </Button>
         </div>
       </div>
     </header>

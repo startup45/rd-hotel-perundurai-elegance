@@ -1,176 +1,171 @@
 
 import React from "react";
 import Layout from "@/components/Layout";
-import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
 import FeatureCard from "@/components/FeatureCard";
-import { 
-  Wifi, Clock, Phone, MapPin, Utensils, 
-  Dumbbell, Car, SwimmingPool, Coffee
+import { Button } from "@/components/ui/button";
+import {
+  Wifi,
+  Car,
+  Shirt,
+  Clock,
+  UtensilsCrossed,
+  Phone,
+  Dumbbell,
+  Coffee,
 } from "lucide-react";
 
 const Amenities = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <HeroSection
-        title="Hotel Amenities"
-        subtitle="Enjoy our comprehensive range of services and facilities for a comfortable stay"
-        backgroundImage="https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?q=80&w=2070"
-      />
+      <div className="bg-ivory">
+        {/* Hero Section */}
+        <section
+          className="relative bg-cover bg-center h-[60vh] flex items-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa')",
+            backgroundPosition: "center center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="container mx-auto px-4 relative z-10 text-white">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Hotel Amenities
+            </h1>
+            <p className="text-xl md:text-2xl max-w-2xl">
+              Exceptional services and facilities for a comfortable stay
+            </p>
+          </div>
+        </section>
 
-      {/* All Amenities */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <SectionTitle
-            title="At Your Service"
-            subtitle="Discover all the facilities and services available for our valued guests"
-            centered={true}
+        {/* Main Amenities Section */}
+        <section className="py-16 container mx-auto px-4">
+          <SectionTitle 
+            title="Our Services & Amenities" 
+            subtitle="At RD Hotels, we pride ourselves on offering a comprehensive range of
+            amenities designed to enhance your stay and ensure maximum comfort
+            and convenience."
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-12">
-            <FeatureCard
-              icon={Clock}
-              title="24/7 Reception"
-              description="Our front desk is staffed around the clock to assist with all your needs and inquiries."
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <FeatureCard
               icon={Wifi}
-              title="Free High-Speed WiFi"
-              description="Stay connected with complimentary high-speed internet access throughout the property."
+              title="Free Wi-Fi"
+              description="High-speed internet access throughout the hotel for all guests"
             />
             <FeatureCard
               icon={Car}
-              title="Free Parking"
-              description="Secure and convenient parking available for all guests at no additional charge."
-            />
-            <FeatureCard
-              icon={Utensils}
-              title="Room Service"
-              description="Enjoy delicious meals in the comfort of your room with our prompt room service."
-            />
-            <FeatureCard
-              icon={SwimmingPool}
-              title="Swimming Pool"
-              description="Take a refreshing dip in our outdoor swimming pool with lounging area."
-            />
-            <FeatureCard
-              icon={Dumbbell}
-              title="Fitness Center"
-              description="Maintain your workout routine in our well-equipped fitness center."
-            />
-            <FeatureCard
-              icon={MapPin}
               title="Travel Desk"
-              description="Assistance with travel arrangements, car rentals, and local sightseeing tours."
+              description="24/7 transportation arrangements and travel assistance"
             />
             <FeatureCard
-              icon={Coffee}
-              title="Business Center"
-              description="Full-service business center with printing, copying, and other office services."
+              icon={Shirt}
+              title="Laundry Service"
+              description="Same-day laundry and dry cleaning services available"
+            />
+            <FeatureCard
+              icon={UtensilsCrossed}
+              title="24/7 Room Service"
+              description="Enjoy our delicious cuisine in the comfort of your room anytime"
+            />
+            <FeatureCard
+              icon={Clock}
+              title="Express Check-in/out"
+              description="Streamlined process for a hassle-free arrival and departure"
             />
             <FeatureCard
               icon={Phone}
               title="Doctor on Call"
-              description="Medical assistance available on request for your peace of mind."
+              description="Medical assistance available upon request at any time"
             />
             <FeatureCard
-              icon={Clock}
-              title="Laundry Service"
-              description="Same-day laundry and dry cleaning services available for your convenience."
+              icon={Dumbbell}
+              title="Fitness Center"
+              description="Modern gym equipment for maintaining your fitness routine"
             />
             <FeatureCard
-              icon={Utensils}
-              title="Breakfast Buffet"
-              description="Start your day with our extensive breakfast buffet featuring local and international cuisine."
-            />
-            <FeatureCard
-              icon={MapPin}
-              title="Concierge Services"
-              description="Our knowledgeable concierge staff can help with dinner reservations, show tickets, and more."
+              icon={Coffee}
+              title="Business Center"
+              description="Fully equipped workspace with printing and scanning facilities"
             />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Additional Services */}
-      <section className="py-20 bg-muted px-4">
-        <div className="container mx-auto">
-          <SectionTitle
-            title="Additional Services"
-            subtitle="Enhance your stay with our premium offerings"
-            centered={true}
-          />
+        {/* Premium Amenities */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <SectionTitle 
+              title="Premium Experiences"
+              subtitle="Elevate your stay with our exclusive premium amenities and services."
+            />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-serif text-2xl font-semibold mb-4">Transportation</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="text-maroon mr-3 mt-1">
-                    <Car size={20} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="card-luxury overflow-hidden">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1540555700478-4be289fbecef"
+                    alt="Spa Services"
+                    className="w-full h-72 object-cover"
+                  />
+                  <div className="absolute top-4 right-4 bg-maroon text-white py-1 px-3 rounded-full text-sm">
+                    Premium
                   </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Airport Transfers</h4>
-                    <p className="text-gray-600 text-sm">Private airport pickup and drop-off in comfortable vehicles. Advance booking required.</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-maroon mr-3 mt-1">
-                    <Car size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Car Rental</h4>
-                    <p className="text-gray-600 text-sm">Wide range of vehicles available for rent with or without chauffeur service.</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-maroon mr-3 mt-1">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Sightseeing Tours</h4>
-                    <p className="text-gray-600 text-sm">Customized local tours to explore the attractions of Perundurai and surrounding areas.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl mb-3">Spa & Wellness</h3>
+                  <p className="text-gray-600 mb-4">
+                    Indulge in rejuvenating spa treatments and massages by our
+                    skilled therapists using premium products. Perfect for
+                    relaxation and wellness.
+                  </p>
+                  <Button className="mt-2">Book a Session</Button>
+                </div>
+              </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-serif text-2xl font-semibold mb-4">Business Services</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="text-maroon mr-3 mt-1">
-                    <Coffee size={20} />
+              <div className="card-luxury overflow-hidden">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
+                    alt="Fine Dining"
+                    className="w-full h-72 object-cover"
+                  />
+                  <div className="absolute top-4 right-4 bg-maroon text-white py-1 px-3 rounded-full text-sm">
+                    Premium
                   </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Meeting Rooms</h4>
-                    <p className="text-gray-600 text-sm">Well-equipped meeting spaces with audio-visual facilities for small gatherings.</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-maroon mr-3 mt-1">
-                    <Wifi size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Video Conferencing</h4>
-                    <p className="text-gray-600 text-sm">High-quality video conferencing facilities for virtual meetings and presentations.</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-maroon mr-3 mt-1">
-                    <Clock size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Secretarial Services</h4>
-                    <p className="text-gray-600 text-sm">Professional assistance with printing, copying, scanning, and other administrative tasks.</p>
-                  </div>
-                </li>
-              </ul>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl mb-3">
+                    Private Chef Experience
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Enjoy a customized dining experience with our executive chef
+                    preparing a special menu tailored to your preferences, served
+                    in your suite or private dining area.
+                  </p>
+                  <Button className="mt-2">Learn More</Button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-maroon text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
+              Experience Luxury at RD Hotels
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Book your stay today and enjoy our premium amenities and
+              world-class service.
+            </p>
+            <Button className="bg-white text-maroon hover:bg-gold hover:text-white">
+              Book Your Stay
+            </Button>
+          </div>
+        </section>
+      </div>
     </Layout>
   );
 };

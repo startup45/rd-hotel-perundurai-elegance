@@ -1,116 +1,111 @@
 
 import React from "react";
 import Layout from "@/components/Layout";
-import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
 import GalleryGrid from "@/components/GalleryGrid";
 
 const Gallery = () => {
-  // Gallery images data with categories
+  // Gallery images with categories
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070",
-      alt: "Deluxe Room",
-      category: "Rooms",
+      src: "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      alt: "Luxury Hotel Room",
+      category: "rooms",
     },
     {
-      src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974",
-      alt: "Executive Suite",
-      category: "Rooms",
+      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+      alt: "Hotel Suite",
+      category: "rooms",
     },
     {
-      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070",
-      alt: "Family Suite",
-      category: "Rooms",
+      src: "https://images.unsplash.com/photo-1566665797739-1674de7a421a",
+      alt: "Standard Room",
+      category: "rooms",
     },
     {
-      src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070",
-      alt: "Hotel Lobby",
-      category: "Hotel",
+      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+      alt: "Restaurant Interior",
+      category: "dining",
     },
     {
-      src: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049",
-      alt: "Hotel Exterior",
-      category: "Hotel",
+      src: "https://images.unsplash.com/photo-1600585152915-d208bec867a1",
+      alt: "Food Dish",
+      category: "dining",
     },
     {
-      src: "https://images.unsplash.com/photo-1576095631533-286352870542?q=80&w=1887",
-      alt: "Swimming Pool",
-      category: "Amenities",
+      src: "https://images.unsplash.com/photo-1530465548486-d0b195884dca",
+      alt: "Cuisine Plate",
+      category: "dining",
     },
     {
-      src: "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?q=80&w=2070",
-      alt: "Hotel Gym",
-      category: "Amenities",
+      src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3",
+      alt: "Event Space",
+      category: "events",
     },
     {
-      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070",
-      alt: "Restaurant",
-      category: "Dining",
+      src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+      alt: "Wedding Venue",
+      category: "events",
     },
     {
-      src: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070",
-      alt: "Hotel Bar",
-      category: "Dining",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098",
-      alt: "Grand Ballroom",
-      category: "Events",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=2125",
+      src: "https://images.unsplash.com/photo-1583653520148-8bef738edbe2",
       alt: "Conference Room",
-      category: "Events",
+      category: "events",
     },
     {
-      src: "https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?q=80&w=1974",
-      alt: "Wedding Setup",
-      category: "Events",
+      src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+      alt: "Hotel Lobby",
+      category: "property",
     },
     {
-      src: "https://images.unsplash.com/photo-1630660664869-c9d3cc676880?q=80&w=1972",
-      alt: "Breakfast Spread",
-      category: "Dining",
+      src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef",
+      alt: "Spa Facilities",
+      category: "amenities",
     },
     {
-      src: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=2071",
-      alt: "Hotel Corridor",
-      category: "Hotel",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070",
-      alt: "Business Center",
-      category: "Amenities",
+      src: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4",
+      alt: "Swimming Pool",
+      category: "amenities",
     },
   ];
 
-  // Define gallery categories
-  const categories = ["Rooms", "Dining", "Amenities", "Events", "Hotel"];
+  const categories = ["rooms", "dining", "events", "property", "amenities"];
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <HeroSection
-        title="Photo Gallery"
-        subtitle="Experience the beauty and elegance of RD Hotels through our visual showcase"
-        backgroundImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070"
-      />
+      <div className="bg-ivory">
+        {/* Hero Section */}
+        <section
+          className="relative bg-cover bg-center h-[60vh] flex items-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa')",
+            backgroundPosition: "center center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="container mx-auto px-4 relative z-10 text-white">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Photo Gallery
+            </h1>
+            <p className="text-xl md:text-2xl max-w-2xl">
+              Explore the elegance and luxury of RD Hotels
+            </p>
+          </div>
+        </section>
 
-      {/* Gallery */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <SectionTitle
-            title="Image Gallery"
-            subtitle="Browse through our collection of images showcasing our beautiful property and facilities"
-            centered={true}
+        {/* Main Gallery Section */}
+        <section className="py-16 container mx-auto px-4">
+          <SectionTitle 
+            title="Browse Our Gallery"
+            subtitle="Get a glimpse of the luxury and comfort that awaits you at RD Hotels.
+            Browse through our collection of images showcasing our rooms,
+            facilities, dining options, and more."
           />
 
-          <div className="mt-12">
-            <GalleryGrid images={galleryImages} categories={categories} />
-          </div>
-        </div>
-      </section>
+          <GalleryGrid images={galleryImages} categories={categories} />
+        </section>
+      </div>
     </Layout>
   );
 };

@@ -41,7 +41,7 @@ const Rooms = () => {
       link: "/rooms/standard-non-ac",
     },
     {
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2074",
+      image: "https://images.unsplash.com/photo-1595576508898-0079fa58f6ed?q=80&w=2074",
       name: "Executive Non-AC Room",
       description: "Spacious non-AC accommodation with upgraded amenities and comfort.",
       price: "₹2,500/night",

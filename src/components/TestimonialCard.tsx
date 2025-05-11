@@ -6,7 +6,7 @@ interface TestimonialCardProps {
   position?: string;
   image?: string;
   quote: string;
-  rating?: number;
+  rating: number;
 }
 
 const TestimonialCard = ({
@@ -14,7 +14,7 @@ const TestimonialCard = ({
   position,
   image,
   quote,
-  rating = 5,
+  rating,
 }: TestimonialCardProps) => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg border border-gold/10">

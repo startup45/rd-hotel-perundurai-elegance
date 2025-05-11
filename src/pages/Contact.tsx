@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
@@ -40,9 +41,12 @@ const Contact = () => {
         <section className="py-16 container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
-              <SectionTitle title="Get in Touch">We're here to assist you with any inquiries about our
+              <SectionTitle 
+                title="Get in Touch"
+                subtitle="We're here to assist you with any inquiries about our
                 accommodations, services, or special events. Feel free to contact
-                us using any of the methods below.</SectionTitle>
+                us using any of the methods below."
+              />
 
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
@@ -125,8 +129,11 @@ const Contact = () => {
         {/* Map Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle title="Our Location">RD Hotels is conveniently located in the heart of Perundurai, with
-            easy access to local attractions and transport facilities.</SectionTitle>
+            <SectionTitle 
+              title="Our Location"
+              subtitle="RD Hotels is conveniently located in the heart of Perundurai, with
+              easy access to local attractions and transport facilities."
+            />
             <div className="h-[450px] w-full rounded-lg overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125323.11354181236!2d77.5018358217968!3d11.272862156825982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f405b82d717%3A0xb4d21517d4206210!2sPerundurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1651890142586!5m2!1sen!2sin"
@@ -145,7 +152,10 @@ const Contact = () => {
         {/* Quick Booking Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <SectionTitle title="Quick Booking">Reserve your stay quickly by providing your details below.</SectionTitle>
+            <SectionTitle 
+              title="Quick Booking"
+              subtitle="Reserve your stay quickly by providing your details below."
+            />
 
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
               <form className="space-y-6">

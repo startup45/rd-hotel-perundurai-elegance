@@ -1,3 +1,4 @@
+
 import React from "react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
@@ -40,9 +41,12 @@ const Amenities = () => {
 
         {/* Main Amenities Section */}
         <section className="py-16 container mx-auto px-4">
-          <SectionTitle title="Our Services & Amenities">At RD Hotels, we pride ourselves on offering a comprehensive range of
+          <SectionTitle 
+            title="Our Services & Amenities" 
+            subtitle="At RD Hotels, we pride ourselves on offering a comprehensive range of
             amenities designed to enhance your stay and ensure maximum comfort
-            and convenience.</SectionTitle>
+            and convenience."
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <FeatureCard
@@ -91,8 +95,10 @@ const Amenities = () => {
         {/* Premium Amenities */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle title="Premium Experiences">Elevate your stay with our exclusive premium amenities and
-              services.</SectionTitle>
+            <SectionTitle 
+              title="Premium Experiences"
+              subtitle="Elevate your stay with our exclusive premium amenities and services."
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="card-luxury overflow-hidden">

@@ -1,3 +1,4 @@
+
 import React from "react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
@@ -70,12 +71,11 @@ const Events = () => {
 
         {/* Event Spaces Section */}
         <section className="py-16 container mx-auto px-4">
-          <SectionTitle title="Our Event Spaces">From intimate gatherings to grand celebrations, RD Hotels offers
-            versatile spaces to accommodate your special occasions.</SectionTitle>
-          <p className="text-lg mb-12 max-w-3xl">
-            From intimate gatherings to grand celebrations, RD Hotels offers
-            versatile spaces to accommodate your special occasions.
-          </p>
+          <SectionTitle 
+            title="Our Event Spaces"
+            subtitle="From intimate gatherings to grand celebrations, RD Hotels offers
+            versatile spaces to accommodate your special occasions."
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="card-luxury">
@@ -145,12 +145,11 @@ const Events = () => {
         {/* Features Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle title="Event Services">Our dedicated team ensures your event runs flawlessly with our
-            comprehensive services.</SectionTitle>
-            <p className="text-lg mb-12 max-w-3xl">
-              Our dedicated team ensures your event runs flawlessly with our
-              comprehensive services.
-            </p>
+            <SectionTitle 
+              title="Event Services"
+              subtitle="Our dedicated team ensures your event runs flawlessly with our
+              comprehensive services."
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <FeatureCard
@@ -174,12 +173,10 @@ const Events = () => {
 
         {/* Gallery Section */}
         <section className="py-16 container mx-auto px-4">
-          <SectionTitle title="Event Gallery">Browse through our gallery showcasing the various events hosted at RD
-            Hotels.</SectionTitle>
-          <p className="text-lg mb-12 max-w-3xl">
-            Browse through our gallery showcasing the various events hosted at RD
-            Hotels.
-          </p>
+          <SectionTitle 
+            title="Event Gallery"
+            subtitle="Browse through our gallery showcasing the various events hosted at RD Hotels."
+          />
 
           <GalleryGrid images={eventImages} categories={eventCategories} />
         </section>
@@ -187,12 +184,10 @@ const Events = () => {
         {/* Inquiry Form */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <SectionTitle title="Inquire About Your Event">Contact us to discuss your event requirements and check
-            availability.</SectionTitle>
-            <p className="text-lg mb-12 max-w-3xl">
-              Contact us to discuss your event requirements and check
-              availability.
-            </p>
+            <SectionTitle 
+              title="Inquire About Your Event"
+              subtitle="Contact us to discuss your event requirements and check availability."
+            />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div>

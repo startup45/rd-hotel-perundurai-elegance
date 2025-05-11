@@ -39,8 +39,8 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        isScrolled ? "navbar-sticky py-3" : "bg-transparent py-5"
-      } w-full z-50 transition-all duration-300`}
+        isScrolled ? "bg-white py-3 shadow-md" : "bg-ivory py-5"
+      } w-full fixed top-0 z-50 transition-all duration-300`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
@@ -49,26 +49,28 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="nav-link font-medium"
-            >
-              {link.name}
-            </Link>
-          ))}
+        {/* Desktop Navigation - Centered */}
+        <nav className="hidden lg:flex items-center justify-center flex-1 mx-10">
+          <div className="flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="nav-link font-medium"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
         </nav>
 
         {/* Phone and Book Now Button (Desktop) */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-4">
           <div className="flex items-center gap-2">
             <Phone size={18} className="text-maroon" />
             <span className="text-sm font-medium">+91 1234567890</span>
           </div>
-          <Button className="btn-primary">Book Now</Button>
+          <Button className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2">Book Now</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -107,15 +109,12 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="btn-primary mt-6">Book Now</Button>
+          <div className="flex items-center gap-2 mt-6">
+            <Phone size={18} className="text-maroon" />
+            <span className="text-sm font-medium">+91 1234567890</span>
+          </div>
+          <Button className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 mt-4">Book Now</Button>
         </div>
-      </div>
-
-      {/* Book Now Floating Button (Mobile) */}
-      <div className="lg:hidden fixed bottom-6 right-6 z-40">
-        <Button className="btn-primary shadow-lg rounded-full px-6 py-5">
-          Book Now
-        </Button>
       </div>
     </header>
   );
